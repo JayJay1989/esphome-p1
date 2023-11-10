@@ -2,7 +2,7 @@ substitutions:
   device_name: p1-dongle-pro
   device_description: "P1 Dongle Pro (ESP32) module to read your smart meter"
   friendly_name: P1 Dongle Pro
-  prj_version: "v23.02.3"
+  prj_version: "v23.02.4"
 
 esphome:
   name: ${device_name}
@@ -70,14 +70,8 @@ button:
       
 sensor:
   - platform: dsmr
-    energy_delivered_lux:
-      name: "Water Consumed"
-      device_class: water
-      unit_of_measurement: "m³"
-      state_class: total_increasing
-    energy_returned_lux:
-      name: "Electricity Peak Current Month"
-      unit_of_measurement: "kW"
+    water_delivered:
+      name: Water delivered
     energy_delivered_tariff1:
       name: "Energy Consumed Tariff 1"
       state_class: total_increasing
