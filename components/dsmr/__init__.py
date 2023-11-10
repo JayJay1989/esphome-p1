@@ -51,7 +51,7 @@ CONFIG_SCHEMA = cv.All(
             cv.Optional(CONF_DECRYPTION_KEY): _validate_key,
             cv.Optional(CONF_CRC_CHECK, default=True): cv.boolean,
             cv.Optional(CONF_GAS_MBUS_ID, default=1): cv.int_,
-            cv.Optional(CONF_MAX_TELEGRAM_LENGTH, default=1500): cv.int_,
+            cv.Optional(CONF_MAX_TELEGRAM_LENGTH, default=1700): cv.int_,
             cv.Optional(CONF_REQUEST_PIN): pins.gpio_output_pin_schema,
             cv.Optional(
                 CONF_REQUEST_INTERVAL, default="0ms"
@@ -79,10 +79,5 @@ async def to_code(config):
     cg.add(var.set_request_interval(config[CONF_REQUEST_INTERVAL].total_milliseconds))
     cg.add(var.set_receive_timeout(config[CONF_RECEIVE_TIMEOUT].total_milliseconds))
 
-    cg.add_define("DSMR_GAS_MBUS_ID", config[CONF_GAS_MBUS_ID])
-
-    # DSMR Parser
-    cg.add_library("glmnet/Dsmr", "0.5")
-
     # Crypto
-    cg.add_library("rweather/Crypto", "0.4.0")
+    cg.add_library("1168", "0.2.0")
