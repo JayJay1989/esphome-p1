@@ -108,16 +108,16 @@ sensor:
       icon: mdi:alert
     voltage_l1:
       name: "Voltage Phase 1"
-    voltage_l2:
-      name: "Voltage Phase 2"
-    voltage_l3:
-      name: "Voltage Phase 3"
+    #voltage_l2:
+    #  name: "Voltage Phase 2"
+    #voltage_l3:
+    #  name: "Voltage Phase 3"
     current_l1:
       name: "Current Phase 1"
-    current_l2:
-      name: "Current Phase 2"
-    current_l3:
-      name: "Current Phase 3"
+    #current_l2:
+    #  name: "Current Phase 2"
+    #current_l3:
+    #  name: "Current Phase 3"
     power_delivered_l1:
       name: "Power Consumed Phase 1"
       unit_of_measurement: "W"
@@ -125,20 +125,20 @@ sensor:
       accuracy_decimals: 0
       filters:
         - multiply: 1000
-    power_delivered_l2:
-      name: "Power Consumed Phase 2"
-      unit_of_measurement: "W"
-      state_class: "measurement"
-      accuracy_decimals: 0
-      filters:
-        - multiply: 1000
-    power_delivered_l3:
-      name: "Power Consumed Phase 3"
-      unit_of_measurement: "W"
-      state_class: "measurement"
-      accuracy_decimals: 0
-      filters:
-        - multiply: 1000
+    #power_delivered_l2:
+    #  name: "Power Consumed Phase 2"
+    #  unit_of_measurement: "W"
+    #  state_class: "measurement"
+    #  accuracy_decimals: 0
+    #  filters:
+    #    - multiply: 1000
+    #power_delivered_l3:
+    #  name: "Power Consumed Phase 3"
+    #  unit_of_measurement: "W"
+    #  state_class: "measurement"
+    #  accuracy_decimals: 0
+    #  filters:
+    #    - multiply: 1000
     power_returned_l1:
       name: "Power Produced Phase 1"
       unit_of_measurement: "W"
@@ -146,23 +146,23 @@ sensor:
       accuracy_decimals: 0
       filters:
         - multiply: 1000
-    power_returned_l2:
-      name: "Power Produced Phase 2"
-      unit_of_measurement: "W"
-      state_class: "measurement"
-      accuracy_decimals: 0
-      filters:
-        - multiply: 1000
-    power_returned_l3:
-      name: "Power Produced Phase 3"
-      unit_of_measurement: "W"
-      state_class: "measurement"
-      accuracy_decimals: 0
-      filters:
-        - multiply: 1000
-    gas_delivered:
-      name: "Gas Consumed"
-      state_class: total_increasing
+    #power_returned_l2:
+    #  name: "Power Produced Phase 2"
+    #  unit_of_measurement: "W"
+    #  state_class: "measurement"
+    #  accuracy_decimals: 0
+    #  filters:
+    #    - multiply: 1000
+    #power_returned_l3:
+    #  name: "Power Produced Phase 3"
+    #  unit_of_measurement: "W"
+    #  state_class: "measurement"
+    #  accuracy_decimals: 0
+    #  filters:
+    #    - multiply: 1000
+    #gas_delivered:
+    #  name: "Gas Consumed"
+    #  state_class: total_increasing
 #for Belgium users
     gas_delivered_be:
       name: "Gas Consumed Belgium"
